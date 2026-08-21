@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { weddingData } from "../data/weddingData";
 
 export default function BibleVerse() {
-  const lines = weddingData.verse.text.split(", ");
 
   return (
     <section className="py-24 px-4 flex items-center justify-center relative overflow-hidden bg-black/70">
@@ -27,11 +26,22 @@ export default function BibleVerse() {
           </div>
         </motion.div>
 
-        <h3 className="font-serif text-[var(--color-soft-ivory)] italic drop-shadow-[0_4px_25px_rgba(212,175,55,0.25)] text-center leading-relaxed"
-          style={{ fontSize: "clamp(1.25rem,5vw,3.5rem)" }}>
-          &ldquo;{lines[0]},<br />
-          <span className="gold-gradient-text not-italic font-normal">{lines[1]}</span>&rdquo;
-        </h3>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1.1, ease: "easeOut" }}
+          className="text-center"
+        >
+          <h3
+            className="font-serif text-[var(--color-soft-ivory)] italic drop-shadow-[0_4px_25px_rgba(212,175,55,0.25)] leading-relaxed"
+            style={{ fontSize: "clamp(1.3rem,5vw,3.2rem)" }}
+          >
+            &ldquo;He has made{" "}
+            <span className="gold-gradient-text not-italic font-normal">everything beautiful</span>
+            {" "}in its time.&rdquo;
+          </h3>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}

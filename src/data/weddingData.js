@@ -1,12 +1,16 @@
 export const weddingData = {
   bride: {
     name: "Evangelin",
-    image: "/images/bride.jpg"
+    image: "/images/bride.jpg",
+    father: "Mr. Arulraj",
+    mother: "Mrs. Selvi Arulraj",
   },
 
   groom: {
     name: "Vivin",
-    image: "/images/groom.jpg"
+    image: "/images/groom.jpg",
+    father: "Mr. Rajkumar",
+    mother: "Mrs. Kamala Rajkumar",
   },
 
   wedding: {
@@ -20,8 +24,8 @@ export const weddingData = {
   },
 
   verse: {
-    text: "Therefore what God has joined together, let no one separate.",
-    reference: "Mark 10:9"
+    text: "He has made everything beautiful in its time.",
+    reference: "Ecclesiastes 3:11"
   },
 
   journey: {

@@ -15,7 +15,6 @@ import ParentsBlessing  from "./components/ParentsBlessing";
 import JourneySection   from "./components/JourneySection";
 import CoupleSection    from "./components/CoupleSection";
 import WeddingDetails   from "./components/WeddingDetails";
-import WeddingDressCode from "./components/WeddingDressCode";
 import Countdown        from "./components/Countdown";
 import VenueSection     from "./components/VenueSection";
 import FinalBlessing    from "./components/FinalBlessing";
@@ -81,9 +80,6 @@ function App() {
             <FloralDivider />
 
             <WeddingDetails />
-            <FloralDivider />
-
-            <WeddingDressCode />
             <FloralDivider />
 
             <Countdown />
