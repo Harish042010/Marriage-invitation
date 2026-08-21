@@ -24,9 +24,8 @@ export default function InvitationCard() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0%,transparent_60%)] pointer-events-none" />
 
       <motion.div
-        style={{ rotateX, y, opacity, scale }}
-        className="relative w-full [transform-style:preserve-3d] shadow-[0_30px_90px_rgba(0,0,0,0.9)] overflow-hidden gold-card rounded-2xl text-center"
         style={{ rotateX, y, opacity, scale, maxWidth: "min(720px,96vw)" }}
+        className="relative w-full [transform-style:preserve-3d] shadow-[0_30px_90px_rgba(0,0,0,0.9)] overflow-hidden gold-card rounded-2xl text-center"
       >
         {/* Inner padding responds to screen width */}
         <div className="p-6 sm:p-10 md:p-14">
