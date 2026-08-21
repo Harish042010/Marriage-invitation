@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-bg: #1c0b0f;
+  --color-card-bg: #33151b;
+  --color-warm-cream: #e8d5bf;
+  --color-champagne-gold: #d4af37;
+  --color-bright-gold: #f3e5ab;
+  --color-deep-gold: #a87f2e;
+  --color-soft-ivory: #fff9f0;
+  --color-deep-brown: #241014;
+  --color-ink: #fff9f0;
+  --color-paper: #33151b;
+  --color-paper-warm: #3b1a21;
+  --color-line-gold: rgba(212, 175, 55, 0.35);
+  --color-royal-red: #a12633;
+
+  --font-display: "Cinzel Decorative", "Cinzel", serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary-bg: #1c0b0f;
+  --card-bg: #33151b;
+  --warm-cream: #e8d5bf;
+  --champagne-gold: #d4af37;
+  --bright-gold: #f3e5ab;
+  --deep-gold: #a87f2e;
+  --soft-ivory: #fff9f0;
+  --deep-brown: #241014;
+  --ink: #fff9f0;
+  --paper: #33151b;
+  --paper-warm: #3b1a21;
+  --line-gold: rgba(212, 175, 55, 0.35);
+  --royal-red: #a12633;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gold Foil Text (dark burgundy background) */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa771c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-gradient-text-subtle {
+  background: linear-gradient(135deg, #fff9f0 0%, #e8d39e 60%, #c5a059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Burgundy Editorial Card */
+.gold-card {
+  background: linear-gradient(165deg, #33151b 0%, #241014 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 24px 55px -18px rgba(0, 0, 0, 0.75), 0 0 26px rgba(161, 38, 51, 0.16);
+}
+
+.gold-card-glow {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.14), inset 0 0 20px rgba(212, 175, 55, 0.05);
+}
+
+/* Soft depth shadow for big serif headings on dark */
+.text-letterpress {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 249, 240, 0.04);
+}
+
+/* Gold dust twinkle (GPU-composited) */
+@keyframes goldTwinkle {
+  0%, 100% { opacity: 0.1; transform: scale(0.7); }
+  50% { opacity: 0.75; transform: scale(1.2); }
+}
+
+.gold-dust {
+  animation: goldTwinkle 4.5s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+/* Shimmer animation */
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.18) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 5s infinite linear;
+}
+
+/* Candle flame flicker */
+@keyframes candleFlicker {
+  0%, 100% { transform: scale(1, 1) translateX(0); opacity: 0.95; }
+  25% { transform: scale(0.94, 1.1) translateX(-0.5px); opacity: 1; }
+  50% { transform: scale(1.05, 0.96) translateX(0.5px); opacity: 0.9; }
+  75% { transform: scale(0.97, 1.06) translateX(-0.3px); opacity: 1; }
+}
+
+@keyframes emberRise {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  15% { opacity: 0.9; }
+  100% { transform: translateY(-46px) scale(1); opacity: 0; }
+}
+
+.candle-flame {
+  animation: candleFlicker 1.1s ease-in-out infinite;
+  transform-origin: 50% 100%;
+  will-change: transform, opacity;
+}
+
+.candle-ember {
+  animation: emberRise 2.6s ease-out infinite;
+  will-change: transform, opacity;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1c0b0f; }
+::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 3px; }
