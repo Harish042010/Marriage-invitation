@@ -270,25 +270,28 @@ function ChurchDoorUnit({ opening, onDoorClick }) {
           background: "linear-gradient(180deg,#4a2a14 0%,#3a1e0e 60%,#2a1508 100%)",
           borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
         }} />
-        {/* Rose window */}
+        {/* Cross in arch — replaces rose window */}
         <div style={{
-          position: "absolute", top: "13%", left: "50%",
+          position: "absolute", top: "12%", left: "50%",
           transform: "translateX(-50%)",
-          width: "min(72px, 14vw)", height: "min(72px, 14vw)",
-          borderRadius: "50%",
-          background: "radial-gradient(circle at 40% 40%, rgba(255,200,80,0.2) 0%, rgba(180,100,50,0.13) 45%, rgba(80,40,120,0.1) 75%, transparent 100%)",
-          border: "1px solid rgba(212,175,55,0.28)",
+          width: "min(58px, 12vw)", height: "min(58px, 12vw)",
+          display: "flex", alignItems: "center", justifyContent: "center",
         }}>
-          <svg width="100%" height="100%" viewBox="0 0 60 60">
-            {[0,30,60,90,120,150].map(a => (
-              <line key={a} x1="30" y1="30"
-                x2={30 + 28 * Math.cos(a * Math.PI / 180)}
-                y2={30 + 28 * Math.sin(a * Math.PI / 180)}
-                stroke="rgba(212,175,55,0.32)" strokeWidth="0.8" />
-            ))}
-            <circle cx="30" cy="30" r="6"  fill="none" stroke="rgba(212,175,55,0.38)" strokeWidth="0.9" />
-            <circle cx="30" cy="30" r="2"  fill="rgba(212,175,55,0.28)" />
-            <circle cx="30" cy="30" r="28" fill="none" stroke="rgba(212,175,55,0.18)" strokeWidth="0.6" />
+          <svg viewBox="0 0 60 60" fill="none" style={{ width: "100%", height: "100%" }} aria-hidden="true">
+            {/* Outer ring */}
+            <circle cx="30" cy="30" r="28" stroke="rgba(212,175,55,0.4)" strokeWidth="0.8"/>
+            <circle cx="30" cy="30" r="22" stroke="rgba(212,175,55,0.2)" strokeWidth="0.5"/>
+            {/* Cross vertical */}
+            <rect x="27.5" y="10" width="5" height="40" rx="1.5" fill="rgba(212,175,55,0.85)"/>
+            {/* Cross horizontal */}
+            <rect x="12" y="24" width="36" height="5" rx="1.5" fill="rgba(212,175,55,0.85)"/>
+            {/* Serif ends */}
+            <rect x="25" y="9" width="10" height="2" rx="1" fill="rgba(212,175,55,0.7)"/>
+            <rect x="25" y="49" width="10" height="2" rx="1" fill="rgba(212,175,55,0.7)"/>
+            <rect x="10" y="22" width="2" height="9" rx="1" fill="rgba(212,175,55,0.7)"/>
+            <rect x="48" y="22" width="2" height="9" rx="1" fill="rgba(212,175,55,0.7)"/>
+            {/* Centre gem */}
+            <circle cx="30" cy="26.5" r="3.5" fill="rgba(255,245,180,0.7)" stroke="rgba(212,175,55,0.8)" strokeWidth="0.5"/>
           </svg>
         </div>
         {/* Keystone */}
