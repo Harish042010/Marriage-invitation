@@ -289,27 +289,34 @@ export default function JourneySection() {
           <StoryCard key={i} text={line} index={i} total={story.length} />
         ))}
 
-        {/* Terminal dot */}
+        {/* Terminal dot — single implementation, aligns to rail on mobile, centred on desktop */}
         <div className="relative z-[2] mt-8">
-          {/* Mobile: aligned to left rail */}
-          <div className="flex md:hidden" style={{ paddingLeft: 10 }}>
+          {/* Mobile: sits on the left rail, centred on the 38px icon column */}
+          <div className="flex md:hidden items-center gap-3" style={{ paddingLeft: 0 }}>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
               className="flex flex-col items-center gap-1.5"
+              style={{ width: 38, flexShrink: 0 }}
             >
               <div className="w-4 h-4 rounded-full border-2 border-[var(--color-champagne-gold)] bg-[#120810]
                               shadow-[0_0_14px_rgba(212,175,55,0.5)]" />
-              <p className="tracking-[0.3em] uppercase font-semibold"
-                style={{ fontSize: "clamp(0.42rem,1.2vw,0.52rem)", color: "rgba(212,175,55,0.42)", fontFamily: "'Montserrat',sans-serif" }}>
-                United Forever
-              </p>
             </motion.div>
+            <motion.p
+              initial={{ opacity: 0, x: 10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="tracking-[0.3em] uppercase font-semibold"
+              style={{ fontSize: "clamp(0.44rem,1.3vw,0.54rem)", color: "rgba(212,175,55,0.45)", fontFamily: "'Montserrat',sans-serif" }}
+            >
+              United Forever
+            </motion.p>
           </div>
 
-          {/* Desktop: centred */}
+          {/* Desktop: centred below both columns */}
           <div className="hidden md:flex justify-center">
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
