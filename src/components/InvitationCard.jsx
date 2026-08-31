@@ -29,8 +29,13 @@ function WaxSeal({ onBreak, broken }) {
               }}/>
             <div className="absolute inset-[6px] rounded-full border border-[rgba(194,176,153,0.55)]"/>
             <div className="absolute inset-[10px] rounded-full border border-[rgba(194,176,153,0.28)]"/>
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-0.5">
-              <Cross size={24} strokeWidth={1.7} color="rgba(255,245,220,0.95)" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-0.75">
+              <div className="rounded-full flex items-center justify-center"
+                style={{ width:"clamp(2.2rem,6vw,2.7rem)", height:"clamp(2.2rem,6vw,2.7rem)",
+                  background:"linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04))",
+                  border:"1px solid rgba(255,240,200,0.45)", boxShadow:"0 8px 20px rgba(59,49,71,0.12)" }}>
+                <Cross size={22} strokeWidth={1.7} color="rgba(255,245,220,0.95)" />
+              </div>
               <motion.p animate={{ opacity:[0.45,1,0.45] }} transition={{ duration:2, repeat:Infinity }}
                 style={{ fontSize:"clamp(0.36rem,1vw,0.46rem)", letterSpacing:"0.22em",
                   textTransform:"uppercase", color:"rgba(255,240,200,0.8)",
@@ -325,9 +330,9 @@ export default function InvitationCard() {
             style={{ fontSize:"clamp(0.5rem,1.5vw,0.62rem)", letterSpacing:"0.3em",
               textTransform:"uppercase", color:"rgba(194,176,153,0.55)",
               fontFamily:"'Montserrat',sans-serif" }}>
-            <Sparkles size={12} strokeWidth={1.8} />
+            <Sparkles size={12} strokeWidth={1.8} color="#C2B099" />
             <span>We look forward to celebrating with you</span>
-            <Sparkles size={12} strokeWidth={1.8} />
+            <Sparkles size={12} strokeWidth={1.8} color="#C2B099" />
           </motion.p>
         )}
       </AnimatePresence>

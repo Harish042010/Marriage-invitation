@@ -57,9 +57,9 @@ export default function FinalBlessing() {
             viewport={{ once:true }} transition={{ duration:1.1, delay:0.1 }}
             className="relative">
             <div className="w-16 h-16 rounded-full flex items-center justify-center"
-              style={{ border:"1px solid rgba(194,176,153,0.5)", background:"rgba(254,248,246,0.9)",
-                backdropFilter:"blur(6px)", boxShadow:"0 4px 20px rgba(59,49,71,0.1)" }}>
-              <Cross size={28} strokeWidth={1.8} color="var(--color-ink)" />
+              style={{ border:"1px solid rgba(194,176,153,0.55)", background:"linear-gradient(135deg, rgba(255,255,255,0.94), rgba(242,233,227,0.86))",
+                backdropFilter:"blur(6px)", boxShadow:"0 12px 28px rgba(59,49,71,0.12), inset 0 1px 0 rgba(255,255,255,0.8)" }}>
+              <Cross size={28} strokeWidth={1.8} color="#A8864A" />
             </div>
             <div className="absolute -inset-3 rounded-full animate-ping pointer-events-none"
               style={{ border:"1px solid rgba(194,176,153,0.2)", animationDuration:"3.5s" }}/>

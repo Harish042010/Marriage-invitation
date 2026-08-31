@@ -106,9 +106,9 @@ function CrossOrnament() {
       <div className="absolute inset-0 rounded-full"
         style={{ border:"1px solid rgba(194,176,153,0.28)", animation:"breathe 3s ease-in-out infinite" }}/>
       <div className="w-10 h-10 rounded-full flex items-center justify-center"
-        style={{ border:"1px solid rgba(194,176,153,0.45)", background:"#FAF8F5",
-          boxShadow:"0 2px 10px rgba(59,49,71,0.07)" }}>
-        <Cross size={18} strokeWidth={1.8} color="var(--color-ink)" />
+        style={{ border:"1px solid rgba(194,176,153,0.5)", background:"linear-gradient(135deg, rgba(255,255,255,0.9), rgba(242,233,227,0.82))",
+          boxShadow:"0 8px 20px rgba(59,49,71,0.07), inset 0 1px 0 rgba(255,255,255,0.8)" }}>
+        <Cross size={18} strokeWidth={1.8} color="#A8864A" />
       </div>
     </motion.div>
   );

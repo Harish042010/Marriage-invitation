@@ -27,8 +27,8 @@ export default function VenueSection() {
         <div className="absolute inset-0 hidden md:block"
           style={{ background:"linear-gradient(to right,transparent 55%,#E0DCE6 100%)" }}/>
         <div className="absolute top-5 left-5 p-2.5 rounded-full flex items-center justify-center"
-          style={{ border:"1px solid rgba(194,176,153,0.5)", background:"rgba(254,248,246,0.85)",
-            backdropFilter:"blur(6px)", color:"var(--color-ink)", boxShadow:"0 2px 10px rgba(59,49,71,0.1)" }}>
+          style={{ border:"1px solid rgba(194,176,153,0.6)", background:"linear-gradient(135deg, rgba(255,255,255,0.9), rgba(242,233,227,0.82))",
+            backdropFilter:"blur(6px)", color:"#A8864A", boxShadow:"0 10px 24px rgba(59,49,71,0.12), inset 0 1px 0 rgba(255,255,255,0.85)" }}>
           <Cross size={18} strokeWidth={1.8} />
         </div>
       </div>

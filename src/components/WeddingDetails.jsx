@@ -48,9 +48,9 @@ export default function WeddingDetails() {
 
                 <div className="flex flex-col items-center text-center">
                   <div className="w-11 h-11 rounded-full flex items-center justify-center mb-5"
-                    style={{ border:"1px solid rgba(194,176,153,0.5)", background:"#FAF8F5",
-                      boxShadow:"0 2px 14px rgba(194,176,153,0.18)" }}>
-                    <EventIcon size={20} strokeWidth={1.8} color="var(--color-ink)" />
+                    style={{ border:"1px solid rgba(194,176,153,0.6)", background:"linear-gradient(135deg, rgba(255,255,255,0.9), rgba(242,233,227,0.82))",
+                      boxShadow:"0 10px 22px rgba(194,176,153,0.18), inset 0 1px 0 rgba(255,255,255,0.8)" }}>
+                    <EventIcon size={19} strokeWidth={1.8} color="#A8864A" />
                   </div>
                 <p className="uppercase tracking-[0.22em] font-medium mb-1"
                   style={{ fontSize:"clamp(0.55rem,1.8vw,0.7rem)", color:"rgba(194,176,153,0.8)" }}>
@@ -72,7 +72,7 @@ export default function WeddingDetails() {
                   { label:"Location",    val:event.venue },
                 ].map((row,i)=>(
                   <div key={i} className="flex flex-col items-center gap-1.5">
-                    <Sparkles size={12} strokeWidth={1.8} color="#C2B099" />
+                    <Sparkles size={12} strokeWidth={1.8} color="#A8864A" />
                     <div>
                       <p className="uppercase tracking-wider font-semibold mb-0.5"
                         style={{ fontSize:"clamp(0.52rem,1.5vw,0.65rem)", color:"rgba(194,176,153,0.8)" }}>

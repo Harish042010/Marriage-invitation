@@ -19,9 +19,9 @@ export default function BibleVerse() {
           viewport={{once:true,margin:"-80px"}} transition={{duration:1.4,ease:"easeOut"}}
           className="mb-6 flex justify-center">
           <div className="w-10 h-10 rounded-full flex items-center justify-center"
-            style={{border:"1px solid rgba(168,93,106,0.5)",background:"#FAF8F5",
-              boxShadow:"0 0 14px rgba(168,93,106,0.15)"}}>
-            <Cross size={18} strokeWidth={1.8} color="var(--color-ink)" />
+            style={{border:"1px solid rgba(168,93,106,0.5)",background:"linear-gradient(135deg, rgba(255,255,255,0.9), rgba(242,233,227,0.8))",
+              boxShadow:"0 0 18px rgba(168,93,106,0.12), inset 0 1px 0 rgba(255,255,255,0.8)"}}>
+            <Cross size={18} strokeWidth={1.8} color="#A8864A" />
           </div>
         </motion.div>
 

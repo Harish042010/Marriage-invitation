@@ -76,13 +76,14 @@ function AttireCard({ item, index }) {
 
       {/* Icon */}
       <div
-        className="w-14 h-14 rounded-full flex items-center justify-center mb-4 border border-[var(--color-champagne-gold)]/30"
+        className="w-14 h-14 rounded-full flex items-center justify-center mb-4"
         style={{
-          background: `radial-gradient(circle, ${item.accent}15 0%, rgba(255,255,255,0.7) 100%)`,
-          boxShadow: `0 4px 20px rgba(17,30,42,0.08)`,
+          background: "linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248,236,227,0.78))",
+          border: "1px solid rgba(194,176,153,0.6)",
+          boxShadow: `0 10px 24px rgba(17,30,42,0.08), inset 0 1px 0 rgba(255,255,255,0.85), 0 0 0 1px ${item.accent}`,
         }}
       >
-        <Icon size={28} strokeWidth={1.8} color="var(--color-ink)" />
+        <Icon size={27} strokeWidth={1.8} color="#A8864A" />
       </div>
 
       <p
@@ -177,9 +178,9 @@ export default function WeddingDressCode() {
           fontFamily: "'Montserrat', sans-serif",
         }}
       >
-        <Sparkles size={12} strokeWidth={1.8} />
+        <Sparkles size={12} strokeWidth={1.8} color="#D4AF37" />
         <span>Smart ethnic formal preferred</span>
-        <Sparkles size={12} strokeWidth={1.8} />
+        <Sparkles size={12} strokeWidth={1.8} color="#D4AF37" />
       </motion.p>
     </section>
   );
