@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { Shirt, Sparkles, UserRound } from "lucide-react";
 
 const attire = [
   {
     group: "Gentlemen",
-    icon: "🤵",
+    icon: UserRound,
     palette: ["#1a1a2e", "#16213e", "#2d4059"],
     swatchLabels: ["Midnight Navy", "Deep Charcoal", "Steel Blue"],
     guide: "Formal suit or traditional veshti with a matching shirt. Tie or bow-tie in gold or ivory. Avoid casual denims.",
@@ -11,7 +12,7 @@ const attire = [
   },
   {
     group: "Ladies",
-    icon: "👗",
+    icon: Sparkles,
     palette: ["#8b1a4a", "#c0405a", "#e8c4b8"],
     swatchLabels: ["Deep Rose", "Blush Crimson", "Soft Blush"],
     guide: "Saree, churidar or lehenga in rich jewel tones — rose, blush, ivory or gold. Avoid pure white or black.",
@@ -19,7 +20,7 @@ const attire = [
   },
   {
     group: "Children",
-    icon: "🎀",
+    icon: Shirt,
     palette: ["#f5d6a0", "#e8b87e", "#d4af37"],
     swatchLabels: ["Warm Cream", "Champagne", "Gold"],
     guide: "Ethnic wear or smart-casual in pastels and golds. Comfortable formal shoes encouraged.",
@@ -61,6 +62,8 @@ function SwatchRow({ colors, labels }) {
 }
 
 function AttireCard({ item, index }) {
+  const Icon = item.icon;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 45 }}
@@ -71,17 +74,15 @@ function AttireCard({ item, index }) {
       style={{ padding: "clamp(0.5rem,4vw,2.25rem)" }}
     >
 
-
       {/* Icon */}
       <div
         className="w-14 h-14 rounded-full flex items-center justify-center mb-4 border border-[var(--color-champagne-gold)]/30"
         style={{
           background: `radial-gradient(circle, ${item.accent}15 0%, rgba(255,255,255,0.7) 100%)`,
           boxShadow: `0 4px 20px rgba(17,30,42,0.08)`,
-          fontSize: "clamp(1.4rem,4vw,1.8rem)",
         }}
       >
-        {item.icon}
+        <Icon size={28} strokeWidth={1.8} color="var(--color-ink)" />
       </div>
 
       <p
@@ -168,7 +169,7 @@ export default function WeddingDressCode() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.4 }}
-        className="text-center mt-10 relative z-10"
+        className="text-center mt-10 relative z-10 flex items-center justify-center gap-3"
         style={{
           color: "rgba(212,175,55,0.4)",
           fontSize: "clamp(0.6rem,1.8vw,0.72rem)",
@@ -176,7 +177,9 @@ export default function WeddingDressCode() {
           fontFamily: "'Montserrat', sans-serif",
         }}
       >
-        ✦ &nbsp; Smart ethnic formal preferred &nbsp; ✦
+        <Sparkles size={12} strokeWidth={1.8} />
+        <span>Smart ethnic formal preferred</span>
+        <Sparkles size={12} strokeWidth={1.8} />
       </motion.p>
     </section>
   );

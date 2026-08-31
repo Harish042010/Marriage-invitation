@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { Cross, Sparkles } from "lucide-react";
 import { weddingData } from "../data/weddingData";
 
 /* ── Wax seal ── */
@@ -29,9 +30,7 @@ function WaxSeal({ onBreak, broken }) {
             <div className="absolute inset-[6px] rounded-full border border-[rgba(194,176,153,0.55)]"/>
             <div className="absolute inset-[10px] rounded-full border border-[rgba(194,176,153,0.28)]"/>
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-0.5">
-              <span style={{ color:"rgba(255,245,220,0.95)", fontFamily:"serif",
-                fontSize:"clamp(1.1rem,3.5vw,1.6rem)", lineHeight:1,
-                textShadow:"0 1px 3px rgba(59,49,71,0.4)" }}>✝</span>
+              <Cross size={24} strokeWidth={1.7} color="rgba(255,245,220,0.95)" />
               <motion.p animate={{ opacity:[0.45,1,0.45] }} transition={{ duration:2, repeat:Infinity }}
                 style={{ fontSize:"clamp(0.36rem,1vw,0.46rem)", letterSpacing:"0.22em",
                   textTransform:"uppercase", color:"rgba(255,240,200,0.8)",
@@ -322,11 +321,13 @@ export default function InvitationCard() {
         {!sealed && (
           <motion.p initial={{ opacity:0, y:8 }} animate={{ opacity:1, y:0 }}
             exit={{ opacity:0 }} transition={{ duration:0.8, delay:1.2 }}
-            className="mt-8 relative z-10 text-center"
+            className="mt-8 relative z-10 text-center flex items-center justify-center gap-3"
             style={{ fontSize:"clamp(0.5rem,1.5vw,0.62rem)", letterSpacing:"0.3em",
               textTransform:"uppercase", color:"rgba(194,176,153,0.55)",
               fontFamily:"'Montserrat',sans-serif" }}>
-            ✦ &nbsp; We look forward to celebrating with you &nbsp; ✦
+            <Sparkles size={12} strokeWidth={1.8} />
+            <span>We look forward to celebrating with you</span>
+            <Sparkles size={12} strokeWidth={1.8} />
           </motion.p>
         )}
       </AnimatePresence>

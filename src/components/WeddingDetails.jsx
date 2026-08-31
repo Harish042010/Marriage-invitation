@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Cross, Heart, Sparkles } from "lucide-react";
 import { weddingData } from "../data/weddingData";
 import TiltCard from "./TiltCard";
 
@@ -6,10 +7,10 @@ export default function WeddingDetails() {
   const events = [
     { title:"Holy Matrimony Service", subtitle:"The Church Ceremony & Exchange of Vows",
       date:weddingData.wedding.dateDisplay, time:weddingData.wedding.time,
-      venue:weddingData.wedding.church + ", " + weddingData.wedding.location, icon:"✝" },
+      venue:weddingData.wedding.church + ", " + weddingData.wedding.location, icon: Cross },
     { title:"Wedding Reception", subtitle:"Heartfelt Celebrations",
       date:weddingData.wedding.dateDisplay, time:"Follows the wedding ceremony",
-      venue:"Infant Jesus Community Hall, " + weddingData.wedding.location, icon:"♡" },
+      venue:"Infant Jesus Community Hall, " + weddingData.wedding.location, icon: Heart },
   ];
 
   return (
@@ -35,20 +36,22 @@ export default function WeddingDetails() {
 
       <div className="relative z-10 mx-auto" style={{ maxWidth:"min(900px,96vw)" }}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
-          {events.map((event, idx) => (
-            <TiltCard key={idx}
-              delay={idx*0.15}
-              className="gold-card rounded-2xl relative"
-              style={{ padding:"clamp(0.5rem,4vw,2.5rem)", overflow:"hidden" }}>
-              <div className="flex flex-col justify-between h-full w-full relative">
+          {events.map((event, idx) => {
+            const EventIcon = event.icon;
 
-              <div className="flex flex-col items-center text-center">
-                <div className="w-11 h-11 rounded-full flex items-center justify-center mb-5"
-                  style={{ border:"1px solid rgba(194,176,153,0.5)", background:"#FAF8F5",
-                    fontSize:"clamp(1rem,3.5vw,1.3rem)",
-                    boxShadow:"0 2px 14px rgba(194,176,153,0.18)" }}>
-                  <span style={{ color:"var(--color-ink)" }}>{event.icon}</span>
-                </div>
+            return (
+              <TiltCard key={idx}
+                delay={idx*0.15}
+                className="gold-card rounded-2xl relative"
+                style={{ padding:"clamp(0.5rem,4vw,2.5rem)", overflow:"hidden" }}>
+                <div className="flex flex-col justify-between h-full w-full relative">
+
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-11 h-11 rounded-full flex items-center justify-center mb-5"
+                    style={{ border:"1px solid rgba(194,176,153,0.5)", background:"#FAF8F5",
+                      boxShadow:"0 2px 14px rgba(194,176,153,0.18)" }}>
+                    <EventIcon size={20} strokeWidth={1.8} color="var(--color-ink)" />
+                  </div>
                 <p className="uppercase tracking-[0.22em] font-medium mb-1"
                   style={{ fontSize:"clamp(0.55rem,1.8vw,0.7rem)", color:"rgba(194,176,153,0.8)" }}>
                   Event 0{idx+1}
@@ -69,7 +72,7 @@ export default function WeddingDetails() {
                   { label:"Location",    val:event.venue },
                 ].map((row,i)=>(
                   <div key={i} className="flex flex-col items-center gap-1.5">
-                    <span style={{ color:"#C2B099", fontSize:"0.6rem" }}>✦</span>
+                    <Sparkles size={12} strokeWidth={1.8} color="#C2B099" />
                     <div>
                       <p className="uppercase tracking-wider font-semibold mb-0.5"
                         style={{ fontSize:"clamp(0.52rem,1.5vw,0.65rem)", color:"rgba(194,176,153,0.8)" }}>
@@ -82,9 +85,10 @@ export default function WeddingDetails() {
                   </div>
                 ))}
               </div>
-              </div>
-            </TiltCard>
-          ))}
+                </div>
+              </TiltCard>
+            );
+          })}
         </div>
       </div>
     </section>

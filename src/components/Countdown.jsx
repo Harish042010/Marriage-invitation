@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Cross } from "lucide-react";
 import { weddingData } from "../data/weddingData";
 
 function getTarget() {
@@ -107,7 +108,7 @@ function CrossOrnament() {
       <div className="w-10 h-10 rounded-full flex items-center justify-center"
         style={{ border:"1px solid rgba(194,176,153,0.45)", background:"#FAF8F5",
           boxShadow:"0 2px 10px rgba(59,49,71,0.07)" }}>
-        <span style={{ color:"var(--color-ink)", fontSize:"1.15rem", fontFamily:"serif" }}>✝</span>
+        <Cross size={18} strokeWidth={1.8} color="var(--color-ink)" />
       </div>
     </motion.div>
   );

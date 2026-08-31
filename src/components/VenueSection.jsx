@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Cross, MapPin } from "lucide-react";
 import { weddingData } from "../data/weddingData";
 import churchPhoto from "../assets/maxresdefault.jpg";
 
@@ -25,10 +26,11 @@ export default function VenueSection() {
           style={{ background:"linear-gradient(to bottom,transparent 40%,#E0DCE6 100%)" }}/>
         <div className="absolute inset-0 hidden md:block"
           style={{ background:"linear-gradient(to right,transparent 55%,#E0DCE6 100%)" }}/>
-        <div className="absolute top-5 left-5 p-2.5 rounded-full"
+        <div className="absolute top-5 left-5 p-2.5 rounded-full flex items-center justify-center"
           style={{ border:"1px solid rgba(194,176,153,0.5)", background:"rgba(254,248,246,0.85)",
-            backdropFilter:"blur(6px)", color:"var(--color-ink)", fontSize:"1.1rem",
-            boxShadow:"0 2px 10px rgba(59,49,71,0.1)" }}>✝</div>
+            backdropFilter:"blur(6px)", color:"var(--color-ink)", boxShadow:"0 2px 10px rgba(59,49,71,0.1)" }}>
+          <Cross size={18} strokeWidth={1.8} />
+        </div>
       </div>
 
       {/* Info */}
@@ -71,7 +73,7 @@ export default function VenueSection() {
           </div>
 
           <a href={mapsUrl} target="_blank" rel="noreferrer"
-            className="w-full inline-flex items-center justify-center tracking-[0.22em] uppercase font-semibold rounded-xl transition-all duration-300"
+            className="w-full inline-flex items-center justify-center gap-2 tracking-[0.22em] uppercase font-semibold rounded-xl transition-all duration-300"
             style={{
               padding:"clamp(0.75rem,2.5vw,1rem) clamp(1rem,4vw,2rem)",
               fontSize:"clamp(0.6rem,1.8vw,0.75rem)",
@@ -79,7 +81,8 @@ export default function VenueSection() {
             }}
             onMouseEnter={e=>{ e.currentTarget.style.background="#C2B099"; e.currentTarget.style.color="#E0DCE6"; }}
             onMouseLeave={e=>{ e.currentTarget.style.background="transparent"; e.currentTarget.style.color="#a3917a"; }}>
-            📍 View on Google Maps
+            <MapPin size={16} strokeWidth={1.8} />
+            <span>View on Google Maps</span>
           </a>
         </motion.div>
       </div>

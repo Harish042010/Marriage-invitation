@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Cross } from "lucide-react";
 import { weddingData } from "../data/weddingData";
 
 export default function BibleVerse() {
@@ -20,7 +21,7 @@ export default function BibleVerse() {
           <div className="w-10 h-10 rounded-full flex items-center justify-center"
             style={{border:"1px solid rgba(168,93,106,0.5)",background:"#FAF8F5",
               boxShadow:"0 0 14px rgba(168,93,106,0.15)"}}>
-            <span style={{color:"var(--color-ink)",fontSize:"1.1rem",fontFamily:"serif"}}>✝</span>
+            <Cross size={18} strokeWidth={1.8} color="var(--color-ink)" />
           </div>
         </motion.div>
 

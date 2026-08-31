@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Cross } from "lucide-react";
 import { useRef } from "react";
 import { weddingData } from "../data/weddingData";
 
@@ -58,7 +59,7 @@ export default function FinalBlessing() {
             <div className="w-16 h-16 rounded-full flex items-center justify-center"
               style={{ border:"1px solid rgba(194,176,153,0.5)", background:"rgba(254,248,246,0.9)",
                 backdropFilter:"blur(6px)", boxShadow:"0 4px 20px rgba(59,49,71,0.1)" }}>
-              <span style={{ color:"var(--color-ink)", fontSize:"clamp(1.6rem,5vw,2rem)", fontFamily:"serif" }}>✝</span>
+              <Cross size={28} strokeWidth={1.8} color="var(--color-ink)" />
             </div>
             <div className="absolute -inset-3 rounded-full animate-ping pointer-events-none"
               style={{ border:"1px solid rgba(194,176,153,0.2)", animationDuration:"3.5s" }}/>
