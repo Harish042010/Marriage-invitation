@@ -51,14 +51,13 @@ function PersonRow({ icon, name, title, delay }) {
   );
 }
 
-function ParentCard({ side, fatherName, motherName, label, delay }) {
+function ParentCard({ side, fatherName, motherName, siblingName, label, delay }) {
   return (
     <TiltCard delay={delay}
       className="gold-card rounded-2xl relative overflow-hidden flex-1"
       style={{padding:"clamp(0.5rem,3.5vw,2rem)"}}>
       <div className="flex flex-col gap-4 h-full w-full">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[2px]"
-        style={{background:"linear-gradient(to right,transparent,rgba(194,176,153,0.8),transparent)"}}/>
+
       <div className="flex items-center gap-2">
         <CrossIcon size={13} color="rgba(168,93,106,0.65)"/>
         <p className="tracking-[0.28em] uppercase font-semibold"
@@ -75,6 +74,22 @@ function ParentCard({ side, fatherName, motherName, label, delay }) {
       </div>
       <PersonRow icon={<FemaleIcon size={14} color="currentColor"/>}
         name={motherName} title="Mother" delay={delay+0.28}/>
+      
+      {siblingName && (
+        <>
+          <div className="flex items-center gap-2 opacity-25">
+            <div className="flex-1 h-px" style={{background:"#C2B099"}}/>
+            <CrossIcon size={7} color="rgba(194,176,153,0.8)"/>
+            <div className="flex-1 h-px" style={{background:"#C2B099"}}/>
+          </div>
+          <PersonRow 
+            icon={siblingName.toLowerCase().includes("sister") ? <FemaleIcon size={14} color="currentColor"/> : <MaleIcon size={14} color="currentColor"/>}
+            name={siblingName.includes(":") ? siblingName.split(":")[1].trim() : siblingName} 
+            title={siblingName.includes(":") ? siblingName.split(":")[0].trim() : "Sibling"} 
+            delay={delay+0.41}/>
+        </>
+      )}
+
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-px"
         style={{background:"linear-gradient(to right,transparent,rgba(194,176,153,0.4),transparent)"}}/>
       </div>
@@ -117,7 +132,7 @@ export default function ParentsBlessing() {
       <div className="relative z-10 mx-auto flex flex-row items-stretch justify-center gap-3 sm:gap-6"
         style={{maxWidth:"min(860px,96vw)"}}>
         <ParentCard side="left" label="Groom's Parents"
-          fatherName={weddingData.groom.father} motherName={weddingData.groom.mother} delay={0}/>
+          fatherName={weddingData.groom.father} motherName={weddingData.groom.mother} siblingName={weddingData.groom.sibling} delay={0}/>
         <motion.div initial={{opacity:0,scale:0.5}} whileInView={{opacity:1,scale:1}}
           viewport={{once:true}} transition={{duration:0.7,delay:0.15}}
           className="flex justify-center items-center z-20 shrink-0 self-center">
@@ -128,7 +143,7 @@ export default function ParentsBlessing() {
           </div>
         </motion.div>
         <ParentCard side="right" label="Bride's Parents"
-          fatherName={weddingData.bride.father} motherName={weddingData.bride.mother} delay={0.1}/>
+          fatherName={weddingData.bride.father} motherName={weddingData.bride.mother} siblingName={weddingData.bride.sibling} delay={0.1}/>
       </div>
     </section>
   );

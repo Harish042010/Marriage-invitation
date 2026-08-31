@@ -93,8 +93,7 @@ export default function FinalBlessing() {
           className="gold-card rounded-xl w-full mb-10 relative text-center"
           style={{ maxWidth:"min(460px,94vw)", padding:"clamp(1.5rem,4.5vw,3rem) clamp(1rem,4.5vw,2.5rem)" }}>
           
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-[2px]"
-            style={{ background:"linear-gradient(to right,transparent,rgba(194,176,153,0.85),transparent)" }}/>
+
 
           <p className="uppercase tracking-[0.22em] mb-3"
             style={{ fontSize:"clamp(0.52rem,1.6vw,0.65rem)", color:"#C2B099" }}>

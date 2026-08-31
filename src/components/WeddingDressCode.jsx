@@ -70,11 +70,7 @@ function AttireCard({ item, index }) {
       className="gold-card rounded-2xl flex flex-col items-center text-center relative overflow-hidden"
       style={{ padding: "clamp(0.5rem,4vw,2.25rem)" }}
     >
-      {/* Colour accent glow top */}
-      <div
-        className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl"
-        style={{ background: `linear-gradient(to right, transparent, ${item.accent}, transparent)` }}
-      />
+
 
       {/* Icon */}
       <div

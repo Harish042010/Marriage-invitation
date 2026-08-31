@@ -4,9 +4,6 @@ import TiltCard from "./TiltCard";
 
 export default function WeddingDetails() {
   const events = [
-    { title:"Engagement", subtitle:"The Ring Ceremony",
-      date:"Saturday, 14th November 2026", time:"6:30 PM",
-      venue:"Infant Jesus Community Hall, " + weddingData.wedding.location, icon:"💍" },
     { title:"Holy Matrimony Service", subtitle:"The Church Ceremony & Exchange of Vows",
       date:weddingData.wedding.dateDisplay, time:weddingData.wedding.time,
       venue:weddingData.wedding.church + ", " + weddingData.wedding.location, icon:"✝" },
@@ -36,16 +33,15 @@ export default function WeddingDetails() {
           style={{ background:"linear-gradient(to right,transparent,#C2B099,transparent)" }}/>
       </div>
 
-      <div className="relative z-10 mx-auto" style={{ maxWidth:"min(1140px,96vw)" }}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+      <div className="relative z-10 mx-auto" style={{ maxWidth:"min(900px,96vw)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
           {events.map((event, idx) => (
             <TiltCard key={idx}
               delay={idx*0.15}
               className="gold-card rounded-2xl relative"
               style={{ padding:"clamp(0.5rem,4vw,2.5rem)", overflow:"hidden" }}>
               <div className="flex flex-col justify-between h-full w-full relative">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1"
-                style={{ background:"linear-gradient(to right,transparent,#C2B099,transparent)" }}/>
+
               <div className="flex flex-col items-center text-center">
                 <div className="w-11 h-11 rounded-full flex items-center justify-center mb-5"
                   style={{ border:"1px solid rgba(194,176,153,0.5)", background:"#FAF8F5",

@@ -107,10 +107,11 @@ function AnimatedName({ text, delay=0 }) {
       className="flex justify-center flex-wrap gap-x-[0.3em] gap-y-2 max-w-[95vw]">
       {words.map((w,i)=>(
         <motion.span key={i} variants={child}
-          className="inline-block font-serif bg-clip-text text-transparent"
+          className="inline-block bg-clip-text text-transparent"
           style={{
-            fontSize:"clamp(2.5rem,9vw,6rem)",
-            lineHeight:1.1, letterSpacing:"0.02em",
+            fontFamily: "'Great Vibes', cursive",
+            fontSize:"clamp(2.5rem, 8vw, 5rem)",
+            lineHeight:1.2, letterSpacing:"0.05em", padding: "0.1em 0.15em",
             backgroundImage:"linear-gradient(135deg, var(--color-ink) 0%, rgba(59,49,71,0.85) 100%)",
           }}>
           {w}

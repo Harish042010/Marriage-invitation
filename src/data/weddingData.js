@@ -4,6 +4,7 @@ export const weddingData = {
     image: "/images/bride.jpg",
     father: "Mr. Christhurajan",
     mother: "Mrs. Annie Flora",
+    sibling:"Brother : Samson David C"
   },
 
   groom: {

@@ -134,8 +134,7 @@ function DateCard({ visible }) {
               boxShadow:"0 6px 28px rgba(59,49,71,0.1),inset 0 1px 0 rgba(255,255,255,0.8)",
               padding:"clamp(0.6rem,2vw,1.2rem)" }}>
             <div className="absolute inset-0 animate-shimmer opacity-20 pointer-events-none"/>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[2px]"
-              style={{ background:"linear-gradient(to right,transparent,rgba(194,176,153,0.9),transparent)" }}/>
+
             {rows.map((r,i)=>(
               <motion.div key={i}
                 initial={{ opacity:0, y:10 }} animate={{ opacity:1, y:0 }}
