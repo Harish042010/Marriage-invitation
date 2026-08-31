@@ -39,7 +39,23 @@ const MusicControl = forwardRef(function MusicControl({ isPlaying, setIsPlaying 
   }), []);
 
   useEffect(() => {
-    if (!isPlaying) audioRef.current?.pause();
+    if (!isPlaying) {
+      audioRef.current?.pause();
+    } else if (!document.hidden) {
+      audioRef.current?.play().catch(e => console.warn("Audio play failed:", e));
+    }
+  }, [isPlaying]);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        audioRef.current?.pause();
+      } else if (isPlaying) {
+        audioRef.current?.play().catch(e => console.warn("Audio play failed:", e));
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
   }, [isPlaying]);
 
   return (

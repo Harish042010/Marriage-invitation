@@ -1,6 +1,6 @@
 export const weddingData = {
   bride: {
-    name: "Evangelin Arockiya Shirley C",
+    name: "Evangelin Arockiya Shirley\u00A0C",
     image: "/images/bride.jpg",
     father: "Mr. Christhurajan",
     mother: "Mrs. Annie Flora",
@@ -8,7 +8,7 @@ export const weddingData = {
   },
 
   groom: {
-    name: "Jacob Charles Vivin M",
+    name: "Jacob Charles Vivin\u00A0M",
     image: "/images/groom.jpg",
     father: "Mr. Edwin Sundar Babu",
     mother: "Mrs. Merina",
