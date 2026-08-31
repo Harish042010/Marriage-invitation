@@ -143,7 +143,7 @@ export default function ScratchReveal({ children, hint = "Scratch To Reveal The 
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[460px] mx-auto aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--color-champagne-gold)]/40 shadow-[0_20px_60px_rgba(0,0,0,0.7),0_0_30px_rgba(212,175,55,0.12)]"
+      className="relative w-full max-w-[460px] mx-auto aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--color-champagne-gold)]/40 shadow-[0_12px_40px_rgba(17,30,42,0.1),0_0_30px_rgba(212,175,55,0.12)]"
       style={{ cursor: "crosshair", touchAction: "none" }}
     >
       {/* Content underneath */}

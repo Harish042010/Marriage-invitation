@@ -68,7 +68,7 @@ function AttireCard({ item, index }) {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: index * 0.12 }}
       className="gold-card rounded-2xl flex flex-col items-center text-center relative overflow-hidden"
-      style={{ padding: "clamp(1.25rem,4vw,2.25rem)" }}
+      style={{ padding: "clamp(0.5rem,4vw,2.25rem)" }}
     >
       {/* Colour accent glow top */}
       <div
@@ -80,8 +80,8 @@ function AttireCard({ item, index }) {
       <div
         className="w-14 h-14 rounded-full flex items-center justify-center mb-4 border border-[var(--color-champagne-gold)]/30"
         style={{
-          background: `radial-gradient(circle, ${item.accent}22 0%, rgba(0,0,0,0.4) 100%)`,
-          boxShadow: `0 0 20px ${item.accent}44`,
+          background: `radial-gradient(circle, ${item.accent}15 0%, rgba(255,255,255,0.7) 100%)`,
+          boxShadow: `0 4px 20px rgba(17,30,42,0.08)`,
           fontSize: "clamp(1.4rem,4vw,1.8rem)",
         }}
       >
@@ -112,7 +112,7 @@ function AttireCard({ item, index }) {
 export default function WeddingDressCode() {
   return (
     <section
-      className="relative py-24 px-4 overflow-hidden"
+      className="relative py-12 md:py-24 px-4 overflow-hidden"
       style={{ background: "linear-gradient(180deg, #1c0b0f 0%, #0a0608 50%, #1c0b0f 100%)" }}
     >
       {/* Ambient glow */}

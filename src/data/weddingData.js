@@ -1,24 +1,24 @@
 export const weddingData = {
   bride: {
-    name: "Evangelin",
+    name: "Evangelin Arockiya Shirley C",
     image: "/images/bride.jpg",
-    father: "Mr. Arulraj",
-    mother: "Mrs. Selvi Arulraj",
+    father: "Mr. Christhurajan",
+    mother: "Mrs. Annie Flora",
   },
 
   groom: {
-    name: "Vivin",
+    name: "Jacob Charles Vivin M",
     image: "/images/groom.jpg",
-    father: "Mr. Rajkumar",
-    mother: "Mrs. Kamala Rajkumar",
+    father: "Mr. Edwin Sundar Babu",
+    mother: "Mrs. Merina",
   },
 
   wedding: {
     date: "2026-11-15",
-    dateDisplay: "November 15, 2026",
-    time: "10:30 AM",
+    dateDisplay: "Sunday, 15th November 2026",
+    time: "10:00 AM Onwards",
     church: "Infant Jesus Church",
-    location: "Thirunagar, Tiruchirappalli, Tamil Nadu",
+    location: "Ponmalai, Tiruchirappalli",
     mapsEmbed:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4970747492316!2d78.7249952793457!3d10.77318940000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa8b4ad91b97f9%3A0x7d51242e22aae142!2sInfant%20Jesus%20Church%2C%20Thirunagar!5e0!3m2!1sen!2sin!4v1786878820843!5m2!1sen!2sin"
   },

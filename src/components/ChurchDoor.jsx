@@ -252,7 +252,7 @@ function ChurchDoorUnit({ opening, onDoorClick }) {
       position: "relative",
       width: "min(480px, 92vw)",
       paddingTop: "min(70px, 13vw)",
-      filter: "drop-shadow(0 16px 60px rgba(0,0,0,0.9))",
+      filter: "drop-shadow(0 16px 60px rgba(17,30,42,0.3))",
     }}>
 
       {/* ── Arch top ── */}
@@ -477,14 +477,14 @@ export default function ChurchDoor({ onEnter }) {
     <div
       className="fixed inset-0 z-[100] overflow-hidden flex flex-col items-center justify-center"
       style={{
-        background: "radial-gradient(ellipse at 50% 35%,#1e140a 0%,#120c05 50%,#070404 100%)",
+        background: "radial-gradient(ellipse at 50% 35%,#E0DCE6 0%,#F5E4E0 50%,#E0DCE6 100%)",
         /* Use 100svh on mobile to account for browser chrome */
         minHeight: "100svh",
       }}
     >
       {/* Vignette */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse at 50% 50%, transparent 35%, rgba(0,0,0,0.72) 100%)",
+        background: "radial-gradient(ellipse at 50% 50%, transparent 35%, rgba(232,201,197,0.45) 100%)",
         zIndex: 1,
       }} />
 
@@ -532,7 +532,7 @@ export default function ChurchDoor({ onEnter }) {
         </div>
 
         <h2 style={{
-          color: "#f5e8b8",
+          color: "rgba(59,49,71,0.8)",
           fontSize: "clamp(0.95rem,4.5vw,1.6rem)",
           fontFamily: "'Cormorant Garamond',Georgia,serif",
           fontWeight: 400,
@@ -545,7 +545,7 @@ export default function ChurchDoor({ onEnter }) {
         </h2>
 
         <p style={{
-          color: "rgba(243,229,171,0.35)",
+          color: "rgba(168,93,106,0.65)",
           fontSize: "clamp(9px,2.2vw,11px)",
           fontStyle: "italic",
           fontFamily: "Georgia,serif",
@@ -572,7 +572,7 @@ export default function ChurchDoor({ onEnter }) {
 
       {/* Fade to app */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "#140a04", zIndex: 60, opacity: 0,
+        background: "#E0DCE6", zIndex: 60, opacity: 0,
         animation: opening ? "fadeOut 1.2s ease-in 3.6s forwards" : "none",
       }} />
 

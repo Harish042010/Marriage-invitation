@@ -12,7 +12,7 @@ export default function FloralDivider({ label = "" }) {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
       className="relative flex items-center justify-center overflow-hidden"
-      style={{ padding: "clamp(1.5rem,4vh,3rem) 0" }}
+      style={{ padding: "clamp(0.25rem,1.5vh,2.5rem) 0" }}
     >
       <svg
         viewBox="0 0 600 48"
@@ -57,10 +57,10 @@ export default function FloralDivider({ label = "" }) {
           return (
             <ellipse key={i} cx={cx} cy={cy} rx="5" ry="3"
               transform={`rotate(${deg},${cx},${cy})`}
-              fill="rgba(212,175,55,0.22)" stroke="rgba(212,175,55,0.45)" strokeWidth="0.5" />
+              fill="rgba(180,74,80,0.4)" stroke="rgba(180,74,80,0.6)" strokeWidth="0.5" />
           );
         })}
-        <circle cx="300" cy="24" r="4.5" fill="rgba(212,175,55,0.35)" stroke="rgba(212,175,55,0.6)" strokeWidth="0.7" />
+        <circle cx="300" cy="24" r="4.5" fill="rgba(180,74,80,0.6)" stroke="rgba(180,74,80,0.8)" strokeWidth="0.7" />
         <circle cx="300" cy="24" r="2"   fill="rgba(255,240,180,0.6)" />
 
         {/* Small diamonds on either side of bloom */}

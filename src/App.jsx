@@ -12,8 +12,8 @@ import NameReveal       from "./components/NameReveal";
 import InvitationCard   from "./components/InvitationCard";
 import BibleVerse       from "./components/BibleVerse";
 import ParentsBlessing  from "./components/ParentsBlessing";
-import JourneySection   from "./components/JourneySection";
-import CoupleSection    from "./components/CoupleSection";
+
+
 import WeddingDetails   from "./components/WeddingDetails";
 import Countdown        from "./components/Countdown";
 import VenueSection     from "./components/VenueSection";
@@ -73,11 +73,7 @@ function App() {
             <ParentsBlessing />
             <FloralDivider />
 
-            <JourneySection />
-            <FloralDivider />
 
-            <CoupleSection />
-            <FloralDivider />
 
             <WeddingDetails />
             <FloralDivider />
